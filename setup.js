@@ -4,7 +4,7 @@ var command = process.argv[2],
     exec = require('child_process').exec;
 
 
-var skeletonURL = 'https://codeload.github.com/gcollazo/brunch-with-ember-reloaded/zip/master';
+var skeletonURL = 'https://codeload.github.com/babsgosgens/brunch-with-nooku-and-ember-reloaded/zip/master';
 var fileSources = [
   {
     src: 'http://builds.emberjs.com/release/ember.js',
@@ -36,14 +36,14 @@ switch (command) {
   case 'update:skeleton':
     exec('curl ' + skeletonURL + '> master.zip', function() {
       exec('unzip master.zip', function() {
-        exec('cat brunch-with-ember-reloaded-master/config.js > config.js');
-        exec('cat brunch-with-ember-reloaded-master/karma.conf.js > karma.conf.js');
-        exec('cat brunch-with-ember-reloaded-master/package.json > package.json');
-        exec('cat brunch-with-ember-reloaded-master/README.md > README.md');
-        exec('cat brunch-with-ember-reloaded-master/setup.js > setup.js');
+        exec('cat brunch-with-nooku-and-ember-reloaded-master/config.js > config.js');
+        exec('cat brunch-with-nooku-and-ember-reloaded-master/karma.conf.js > karma.conf.js');
+        exec('cat brunch-with-nooku-and-ember-reloaded-master/package.json > package.json');
+        exec('cat brunch-with-nooku-and-ember-reloaded-master/README.md > README.md');
+        exec('cat brunch-with-nooku-and-ember-reloaded-master/setup.js > setup.js');
         exec('rm -rf generators', function() {
-          exec('mv brunch-with-ember-reloaded-master/generators/ generators/', function() {
-            exec('rm -rf brunch-with-ember-reloaded-master');
+          exec('mv brunch-with-nooku-and-ember-reloaded-master/generators/ generators/', function() {
+            exec('rm -rf brunch-with-nooku-and-ember-reloaded-master');
             exec('rm -r master.zip');
           });
         });
