@@ -1,6 +1,7 @@
 exports.config = {
   paths: {
-    watched: ['app', 'envs', 'vendor', 'test']
+    watched: ['app', 'envs', 'vendor', 'test'],
+    public: ''
   },
   files: {
     javascripts: {
